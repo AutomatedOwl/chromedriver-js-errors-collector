@@ -70,13 +70,11 @@ To disable asserting JS errors after test execution, use:
 @JSErrorsCollectorTestNG(assertJSErrors = false)
 ```
 
-
 To disable logging JS errors after test execution, use:
 
 ```
 @JSErrorsCollectorTestNG(logJSErrors = false)
 ```
-
 
 To disable both, use:
 
@@ -86,21 +84,20 @@ To disable both, use:
 
 ### Maven Dependencies
 
-TestNG:
-```
-        <dependency>
-            <groupId>com.github.automatedowl</groupId>
-            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-```
-
-
 JUnit5:
 ```
         <dependency>
             <groupId>com.github.automatedowl</groupId>
             <artifactId>chromedriver-js-errors-collector-junit</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+```
+
+TestNG:
+```
+        <dependency>
+            <groupId>com.github.automatedowl</groupId>
+            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
             <version>1.0.1</version>
         </dependency>
 ```

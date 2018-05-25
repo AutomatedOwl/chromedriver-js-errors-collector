@@ -80,8 +80,6 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
     }
 
     private boolean isJSErrorsLogEnabled(IInvokedMethod method) {
-        System.out.println(method.getTestMethod().getConstructorOrMethod().getMethod().getName());
-        System.out.println(method.getTestMethod().getConstructorOrMethod().getMethod().getAnnotation(JSErrorsCollectorTestNG.class));
         return method.getTestMethod().getConstructorOrMethod().getMethod().getAnnotation(
                 JSErrorsCollectorTestNG.class).logJSErrors();
     }

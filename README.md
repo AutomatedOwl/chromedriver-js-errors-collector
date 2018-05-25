@@ -84,10 +84,10 @@ To disable both, use:
 @JSErrorsCollectorTestNG(logJSErrors = false, assertJSErrors = false)
 ```
 
-### Maven Dependency
+### Maven Dependencies
 
 TestNG:
-'''
+```
         <dependency>
             <groupId>com.github.automatedowl</groupId>
             <artifactId>chromedriver-js-errors-collector-testng</artifactId>
@@ -98,11 +98,11 @@ TestNG:
             <artifactId>chromedriver-js-errors-collector-testng</artifactId>
             <version>1.0.1</version>
         </dependency>
-'''
+```
 
 
 JUnit5:
-'''
+```
         <dependency>
             <groupId>com.github.automatedowl</groupId>
             <artifactId>chromedriver-js-errors-collector-testng</artifactId>
@@ -113,4 +113,4 @@ JUnit5:
             <artifactId>chromedriver-js-errors-collector-junit</artifactId>
             <version>1.0.1</version>
         </dependency>
- '''
+```

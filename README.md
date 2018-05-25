@@ -93,21 +93,11 @@ TestNG:
             <artifactId>chromedriver-js-errors-collector-testng</artifactId>
             <version>1.0.1</version>
         </dependency>
-        <dependency>
-            <groupId>com.github.automatedowl</groupId>
-            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
-            <version>1.0.1</version>
-        </dependency>
 ```
 
 
 JUnit5:
 ```
-        <dependency>
-            <groupId>com.github.automatedowl</groupId>
-            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
-            <version>1.0.1</version>
-        </dependency>
         <dependency>
             <groupId>com.github.automatedowl</groupId>
             <artifactId>chromedriver-js-errors-collector-junit</artifactId>

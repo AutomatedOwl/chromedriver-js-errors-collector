@@ -82,7 +82,7 @@ To disable both, use:
 @JSErrorsCollectorTestNG(logJSErrors = false, assertJSErrors = false)
 ```
 
-### Maven Dependencies
+### Maven dependencies
 
 JUnit5:
 ```

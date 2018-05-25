@@ -4,7 +4,7 @@ Java library which allows to easily collect JS errors received in Chromedriver s
 
 Currently, the library supports JUnit5 and TestNG testing framework.
 
-Example of JUnit5 usage:
+### Example of JUnit5 usage:
 
 ```
     @Test
@@ -26,7 +26,7 @@ Example of JUnit5 usage:
     }
 ```
 
-Example of TestNG usage:
+### Example of TestNG usage:
 
 ```
 @Listeners(JSErrorsCollectorListener.class)
@@ -59,7 +59,7 @@ public class JSCollectorTestNGTest {
     }
 ```
 
-Annotation values
+### Annotation values
 
 By default, using the annotation will cause your test to fail on JS errors received during Chromedriver session,
 and it would also use java.util.logging.Logger object to log JS errors after test execution.
@@ -83,3 +83,34 @@ To disable both, use:
 ```
 @JSErrorsCollectorTestNG(logJSErrors = false, assertJSErrors = false)
 ```
+
+### Maven Dependency
+
+TestNG:
+'''
+        <dependency>
+            <groupId>com.github.automatedowl</groupId>
+            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.automatedowl</groupId>
+            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+'''
+
+
+JUnit5:
+'''
+        <dependency>
+            <groupId>com.github.automatedowl</groupId>
+            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.automatedowl</groupId>
+            <artifactId>chromedriver-js-errors-collector-junit</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+ '''

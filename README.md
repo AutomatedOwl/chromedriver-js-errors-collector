@@ -35,7 +35,7 @@ public class JSCollectorTestNGTest {
     private WebDriver driver;
 
     @BeforeMethod
-    public void setDriverForListener(Method method) {
+    void setDriverForListener(Method method) {
 
         // Create a new instance of ChromeDriver.
         driver = new ChromeDriver();

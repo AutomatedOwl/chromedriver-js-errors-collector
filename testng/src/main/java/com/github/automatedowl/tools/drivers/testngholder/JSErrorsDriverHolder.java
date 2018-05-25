@@ -1,4 +1,4 @@
-package net.autobox.tools.testng.drivers;
+package com.github.automatedowl.tools.drivers.testngholder;
 
 import java.util.HashMap;
 import java.util.Map;

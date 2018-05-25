@@ -1,4 +1,4 @@
-package net.autobox.tools.drivers;
+package com.github.automatedowl.tools.drivers.junitholder;
 
 import java.util.HashMap;
 import java.util.Map;

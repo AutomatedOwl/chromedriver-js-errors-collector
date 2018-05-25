@@ -1,6 +1,6 @@
-package net.autobox.tools;
+package com.github.automatedowl.tools;
 
-import net.autobox.tools.testng.drivers.JSErrorsDriverHolder;
+import com.github.automatedowl.tools.drivers.testngholder.JSErrorsDriverHolder;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
@@ -56,7 +56,7 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
             if (isAssertJSErrorsEnabled(
                     iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)
                     && iInvokedMethod
-                    .getTestMethod().getTestClass().toString().contains("net.autobox.tools.test")
+                    .getTestMethod().getTestClass().toString().contains("com.github.automatedowl")
                     && iInvokedMethod
                     .getTestMethod().getConstructorOrMethod().getMethod().getName().equals("referenceErrorTest")) {
                 // Don't throw exception on unit test.

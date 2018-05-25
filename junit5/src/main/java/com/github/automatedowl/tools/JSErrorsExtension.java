@@ -1,4 +1,4 @@
-package net.autobox.tools;
+package com.github.automatedowl.tools;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
-import net.autobox.tools.drivers.JSErrorsDriverHolder;
+import com.github.automatedowl.tools.drivers.junitholder.JSErrorsDriverHolder;
 import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
 import org.junit.jupiter.api.extension.Extension;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -50,7 +50,7 @@ public class JSErrorsExtension implements Extension, AfterTestExecutionCallback 
         // Check for JS errors assertion boolean flag.
         // Skip error throwing in case of negative unit test.
         if (isAssertJSErrorsEnabled(context) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)
-                && context.getTestClass().toString().contains("net.autobox.tools")
+                && context.getTestClass().toString().contains("com.github.automatedowl")
                 && context.getRequiredTestMethod().getName().equals("referenceErrorTest")) {
             assertThrows(WebDriverException.class, ()->{
                 throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);

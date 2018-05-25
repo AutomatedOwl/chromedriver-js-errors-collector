@@ -24,7 +24,7 @@ public class JSCollectorTestNGTest {
     }
 
     @BeforeMethod
-    public void setDriverForListener(Method method) {
+    void setDriverForListener(Method method) {
         driver = new ChromeDriver();
         JSErrorsDriverHolder.setDriverForTest(method.getName(), driver);
     }

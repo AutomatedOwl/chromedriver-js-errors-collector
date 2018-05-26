@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import org.junit.jupiter.api.extension.ExtendWith;
 
-/** Java annotation for collection chromedriver JS errors using JUnit 5. */
+/** Java annotation for collecting chromedriver JS errors using JUnit 5. */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD,ElementType.ANNOTATION_TYPE})
 @ExtendWith(JSErrorsExtension.class)

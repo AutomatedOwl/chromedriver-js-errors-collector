@@ -5,7 +5,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/** Java annotation for collection chromedriver JS errors using TestNG. */
+/** Java annotation for collecting chromedriver JS errors using TestNG. */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD,ElementType.ANNOTATION_TYPE})
 public @interface JSErrorsCollectorTestNG {

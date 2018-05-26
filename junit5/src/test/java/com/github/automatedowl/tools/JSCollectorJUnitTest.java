@@ -1,6 +1,5 @@
 package com.github.automatedowl.tools;
 
-import com.github.automatedowl.tools.JSErrorsCollectorJUnit;
 import com.github.automatedowl.tools.drivers.junitholder.JSErrorsDriverHolder;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;

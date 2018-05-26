@@ -63,6 +63,7 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
             }
             else if (isAssertJSErrorsEnabled(
                     iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)) {
+                JSErrorsDriverHolder.getDriverForTest(iInvokedMethod.getTestMethod().getMethodName()).quit();
                 throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
             }
         }

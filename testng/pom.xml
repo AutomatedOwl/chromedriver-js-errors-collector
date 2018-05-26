@@ -4,9 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.automatedowl.tools</groupId>
-    <artifactId>chromedriver-js-errors-collector</artifactId>
+    <groupId>com.github.automatedowl</groupId>
+    <artifactId>chromedriver-js-errors-collector-testng</artifactId>
     <version>1.0.1</version>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Java library which allows to easily collect JS errors received in Chromedriver session,
+        using annotations on test methods.</description>
+    <url>https://github.com/AutomatedOwl</url>
     <build>
         <sourceDirectory>src/main/java</sourceDirectory>
         <testSourceDirectory>src/test/java</testSourceDirectory>
@@ -62,4 +66,25 @@
             <version>6.14.3</version>
         </dependency>
     </dependencies>
+    <scm>
+        <connection>scm:git:git://github.com/AutomatedOwl/chromedriver-js-errors-collector.git</connection>
+        <developerConnection>
+            scm:git:ssh://github.com:AutomatedOwl/chromedriver-js-errors-collector.git
+        </developerConnection>
+        <url>https://github.com/AutomatedOwl/chromedriver-js-errors-collector</url>
+    </scm>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>AutomatedOwl</id>
+            <email>automatedowl@yandex.com</email>
+            <url>https://github.com/AutomatedOwl/</url>
+        </developer>
+    </developers>
 </project>

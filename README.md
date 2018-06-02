@@ -18,10 +18,10 @@ Currently, the library supports JUnit5 and TestNG testing framework.
         JSErrorsDriverHolder.setDriverForTest(testInfo.getDisplayName(), driver);
 
         // Navigate to URL.
-        driver.get("http://testjs.site88.net");
+        site88Page.navigateToPage(driver);
 
         // The click on the button in the test site should cause JS reference error.
-        driver.findElement(By.name("testClickButton")).click();
+        site88Page.getTestButton().click();
         waitBeforeClosingBrowser();
     }
 ```
@@ -51,10 +51,10 @@ public class JSCollectorTestNGTest {
     void referenceErrorTest() throws InterruptedException {
 
         // Navigate to URL.
-        driver.get("http://testjs.site88.net");
+        site88Page.navigateToPage(driver);
 
         // The click on the button in the test site should cause JS reference error.
-        driver.findElement(By.name("testClickButton")).click();
+        site88Page.getTestButton().click();
         waitBeforeClosingBrowser();
     }
 ```

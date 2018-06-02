@@ -45,6 +45,4 @@ public class Site88Page {
     public void navigateToPage(WebDriver driver) {
         driver.get(SITE88_URL);
     }
-
-
 }

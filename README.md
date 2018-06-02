@@ -86,18 +86,18 @@ To disable both, use:
 
 JUnit5:
 ```
-        <dependency>
-            <groupId>com.github.automatedowl</groupId>
-            <artifactId>chromedriver-js-errors-collector-junit</artifactId>
-            <version>1.0.2</version>
-        </dependency>
+    <dependency>
+        <groupId>com.github.automatedowl</groupId>
+        <artifactId>chromedriver-js-errors-collector-junit</artifactId>
+        <version>1.0.2</version>
+    </dependency>
 ```
 
 TestNG:
 ```
-        <dependency>
-            <groupId>com.github.automatedowl</groupId>
-            <artifactId>chromedriver-js-errors-collector-testng</artifactId>
-            <version>1.0.2</version>
-        </dependency>
+    <dependency>
+        <groupId>com.github.automatedowl</groupId>
+        <artifactId>chromedriver-js-errors-collector-testng</artifactId>
+        <version>1.0.2</version>
+    </dependency>
 ```

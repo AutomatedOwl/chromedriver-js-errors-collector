@@ -6,7 +6,7 @@
 
     <groupId>com.github.automatedowl</groupId>
     <artifactId>chromedriver-js-errors-collector-junit</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Java library which allows to easily collect JS errors received in Chromedriver session,
         using annotations on test methods.</description>

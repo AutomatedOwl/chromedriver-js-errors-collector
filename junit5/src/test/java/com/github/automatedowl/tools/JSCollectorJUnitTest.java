@@ -1,5 +1,7 @@
 package com.github.automatedowl.tools;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.github.automatedowl.tools.drivers.junitholder.JSErrorsDriverHolder;
 import com.github.automatedowl.tools.pages.BlankPage;
 import com.github.automatedowl.tools.pages.Site88Page;
@@ -70,6 +72,14 @@ public class JSCollectorJUnitTest {
         // Navigate to URL.
         blankPage.navigateToPage(driver);
         waitBeforeClosingBrowser();
+    }
+
+    /** Test method.
+     * It should not use JSErrorsCollectorJUnit annotation. */
+    @Test
+    void noAnnotationTest() {
+        driver = new ChromeDriver();
+        assertTrue(true);
     }
 
     @AfterEach

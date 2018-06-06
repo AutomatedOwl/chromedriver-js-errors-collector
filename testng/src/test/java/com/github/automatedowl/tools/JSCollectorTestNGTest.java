@@ -6,6 +6,7 @@ import com.github.automatedowl.tools.pages.BlankPage;
 import com.github.automatedowl.tools.pages.Site88Page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 /** Class that contains TestNG unit tests for Chromedriver JS errors collector. */
@@ -62,6 +63,13 @@ public class JSCollectorTestNGTest {
         BlankPage blankPage = new BlankPage();
         blankPage.navigateToPage(driver);
         waitBeforeClosingBrowser();
+    }
+
+    /** Test method.
+     * It should not use JSErrorsCollectorTestNG annotation. */
+    @Test
+    void noAnnotationTest() {
+        Assert.assertTrue(true);
     }
 
     @AfterMethod

@@ -38,7 +38,7 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
     public void afterInvocation(IInvokedMethod iInvokedMethod, ITestResult iTestResult) {
 
         // Check if test method had invoked.
-        if (iInvokedMethod.getTestMethod().isTest()) {
+        if (iInvokedMethod.getTestMethod().isTest() && isTestAnnotated(iInvokedMethod)) {
 
             // Get log entries from Chromedriver session.
             List<LogEntry> logEntries = getLogEntriesForTest(iInvokedMethod);
@@ -67,6 +67,14 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
                 throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
             }
         }
+    }
+
+    private boolean isTestAnnotated(IInvokedMethod method) {
+        return method
+                .getTestMethod()
+                .getConstructorOrMethod()
+                .getMethod()
+                .getAnnotation(JSErrorsCollectorTestNG.class) != null;
     }
 
     private boolean isJSErrorContained(String message) {

@@ -1,8 +1,8 @@
 # chromedriver-js-errors-collector
 
-Java library which allows to easily collect JavaScript errors received in Chromedriver session, using annotations on test methods.
+Java library which allows to easily collect JavaScript errors received in Chromedriver session, using annotations on test methods. Currently, the library supports JUnit5 and TestNG testing framework.
 
-Currently, the library supports JUnit5 and TestNG testing framework.
+
 
 ### Example of JUnit5 usage:
 

@@ -24,6 +24,11 @@ Java library which allows to easily collect JavaScript errors received in Chrome
         site88Page.getTestButton().click();
         waitBeforeClosingBrowser();
     }
+    
+    @AfterEach
+    void closeDriver() {
+        driver.quit();
+    }
 ```
 
 ### Example of TestNG usage:
@@ -57,7 +62,16 @@ public class JSCollectorTestNGTest {
         site88Page.getTestButton().click();
         waitBeforeClosingBrowser();
     }
+    
+    @AfterMethod
+    void closeDriver() {
+        driver.quit();
+    }
 ```
+
+### Closing your browser session
+
+In order for the errors comparison to work properly, you should use 'AfterMethod' in TestNG and 'AfterEach' in JUnit in order to call driver.quit(). This would allow the listeners to interact with your WebDriver object after test execution. 
 
 ### Annotation values
 
@@ -89,7 +103,7 @@ JUnit5:
     <dependency>
         <groupId>com.github.automatedowl</groupId>
         <artifactId>chromedriver-js-errors-collector-junit</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </dependency>
 ```
 
@@ -98,6 +112,6 @@ TestNG:
     <dependency>
         <groupId>com.github.automatedowl</groupId>
         <artifactId>chromedriver-js-errors-collector-testng</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </dependency>
 ```

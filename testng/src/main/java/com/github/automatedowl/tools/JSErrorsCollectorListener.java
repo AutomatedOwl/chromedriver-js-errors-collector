@@ -62,9 +62,9 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
                 // Don't throw exception on unit test.
             }
             else if (isAssertJSErrorsEnabled(
-                    iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)) {
+                    iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).count()!=0) {
                 logger.severe(JS_ERRORS_EXCEPTION_STRING);
-                iTestResult.setStatus(ITestResult.FAILURE);
+                throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
             }
         }
     }

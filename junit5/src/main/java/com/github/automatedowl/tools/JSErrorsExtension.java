@@ -55,7 +55,7 @@ public class JSErrorsExtension implements Extension, AfterTestExecutionCallback 
             assertThrows(WebDriverException.class, ()->{
                 throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
             });
-        } else if (isAssertJSErrorsEnabled(context) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)) {
+        } else if (isAssertJSErrorsEnabled(context) && getJSErrorsFromLogEntries(logEntries)..count()!=0) {
             throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
         }
     }

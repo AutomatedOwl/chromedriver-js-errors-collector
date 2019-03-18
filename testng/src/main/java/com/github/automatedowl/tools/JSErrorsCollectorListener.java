@@ -54,7 +54,7 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
             // Check for JS errors assertion boolean flag.
             // Skip error throwing in case of negative unit test.
             if (isAssertJSErrorsEnabled(
-                    iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)
+                    iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).count()!=0
                     && iInvokedMethod
                     .getTestMethod().getTestClass().toString().contains("com.github.automatedowl")
                     && iInvokedMethod

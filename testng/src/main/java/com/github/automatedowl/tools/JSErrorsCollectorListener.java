@@ -64,7 +64,7 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
             else if (isAssertJSErrorsEnabled(
                     iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).count()!=0) {
                 logger.severe(JS_ERRORS_EXCEPTION_STRING);
-                throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
+                throw new WebDriverException(getJSErrorsFromLogEntries(logEntries).map(LogEntry::getMessage).collect(Collectors.joining("\n")));
             }
         }
     }

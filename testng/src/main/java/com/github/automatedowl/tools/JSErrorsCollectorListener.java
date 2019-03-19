@@ -1,7 +1,6 @@
 package com.github.automatedowl.tools;
 
 import com.github.automatedowl.tools.drivers.testngholder.JSErrorsDriverHolder;
-import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.testng.*;
@@ -10,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /** TestNG listener for JSErrorsCollectorTestNG annotation.
@@ -64,7 +64,7 @@ public class JSErrorsCollectorListener implements IInvokedMethodListener {
             else if (isAssertJSErrorsEnabled(
                     iInvokedMethod) && getJSErrorsFromLogEntries(logEntries).count()!=0) {
                 logger.severe(JS_ERRORS_EXCEPTION_STRING);
-                throw new WebDriverException(getJSErrorsFromLogEntries(logEntries).map(LogEntry::getMessage).collect(Collectors.joining("\n")));
+                Assert.fail(getJSErrorsFromLogEntries(logEntries).map(LogEntry::getMessage).collect(Collectors.joining("\n")));
             }
         }
     }

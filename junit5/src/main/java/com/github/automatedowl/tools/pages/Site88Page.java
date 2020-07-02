@@ -10,7 +10,7 @@ public class Site88Page {
 
     /** Default timeout of waiting for web elements in the page. */
     private static final int DEFAULT_ELEMENT_TIMEOUT = 30;
-    private static final String SITE88_URL = "http://testjs.site88.net";
+    private static final String SITE88_URL = "http://testjs.epizy.com/";
 
     /////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////// Constructor /////////////////////////////////////

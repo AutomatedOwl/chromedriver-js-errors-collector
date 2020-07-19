@@ -49,13 +49,13 @@ public class JSErrorsExtension implements Extension, AfterTestExecutionCallback 
 
         // Check for JS errors assertion boolean flag.
         // Skip error throwing in case of negative unit test.
-        if (isAssertJSErrorsEnabled(context) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)
+        if (isAssertJSErrorsEnabled(context) && getJSErrorsFromLogEntries(logEntries).count()!=0
                 && context.getTestClass().toString().contains("com.github.automatedowl")
                 && context.getRequiredTestMethod().getName().equals("referenceErrorTest")) {
             assertThrows(WebDriverException.class, ()->{
                 throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
             });
-        } else if (isAssertJSErrorsEnabled(context) && getJSErrorsFromLogEntries(logEntries).anyMatch(e -> true)) {
+        } else if (isAssertJSErrorsEnabled(context) && getJSErrorsFromLogEntries(logEntries).count()!=0) {
             throw new WebDriverException(JS_ERRORS_EXCEPTION_STRING);
         }
     }
